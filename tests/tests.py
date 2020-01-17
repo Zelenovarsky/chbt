@@ -44,7 +44,7 @@ def test_message_missing_values():
     response = client.post(
         '/message',
         json={
-            
+
         }
     )
     assert response.status_code == 422
