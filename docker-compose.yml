@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  chatbot:
+    container_name: 'chbt'
+    image: chbt:latest
+    command: uvicorn --host 0.0.0.0 --port 5000 bot:app
+    ports:
+      - 8000:5000
+

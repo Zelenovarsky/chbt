@@ -1,7 +1,6 @@
-# coding=utf-8
 
 import pickledb
-from utils.constants import *
+from utils.constants import YES, NO, WELCOME, WRONG_QUERY, question_tree
 import datetime
 
 db = pickledb.load('user_data.db', auto_dump=True)
@@ -35,22 +34,15 @@ def check_message(message):
 
 
 def process_message(user_id, message):
-    '''
-    :param user_id: user_id
-    :param message: message
-    :return: response + state
-    '''
     if message == '/start':
         state = 'start'
         save_node(user_id, state, message)
         return question_tree['start']['message'], 0
     state = get_current_node(user_id)
-    print('STATE', state)
     if not state:
         return WELCOME, 0
 
     question = question_tree.get(state)
-    print('q', question)
     response = question.get(check_message(message))
 
     if not response:
