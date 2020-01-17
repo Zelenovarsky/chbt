@@ -2,7 +2,7 @@ version: '3'
 
 services:
   chatbot:
-    container_name: 'chbt'
+    container_name: 'kek'
     image: chbt:latest
     command: uvicorn --host 0.0.0.0 --port 5000 bot:app
     ports:
