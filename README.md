@@ -18,7 +18,7 @@ http://localhost:8080/docs
 
 https://salty-earth-71701.herokuapp.com/docs
 
-Ci/CD на Travis ci с деплоем в хероку и докерхаб
+Ci/CD на Travis ci с деплоем в хероку и докерхаб (в бранчах видно, что испорченная бранча не проходит проверки)
 
 
 как пользоваться:
