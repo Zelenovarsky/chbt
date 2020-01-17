@@ -19,3 +19,12 @@ http://localhost:8080/docs
 https://salty-earth-71701.herokuapp.com/docs
 
 Ci/CD на Travis ci с деплоем в хероку и докерхаб
+
+
+как пользоваться:
+
+В принципе, все интеитивно понятно в url/docs 
+
+post запрос в /message чтобы начать/продолжить диалог
+
+и get d /history с user_id чтобы посмотреть историю
