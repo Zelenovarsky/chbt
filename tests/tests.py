@@ -41,6 +41,13 @@ def test_message_missing_values():
         }
     )
     assert response.status_code == 422
+    response = client.post(
+        '/message',
+        json={
+            
+        }
+    )
+    assert response.status_code == 422
 
 
 def test_message_bad_request():
@@ -65,6 +72,7 @@ def test_message_bad_request():
 def test_empty_history():
     response = client.get("/history")
     assert response.status_code == 422
+
 
 def test_process_message():
     message_utils.db = pickledb.load('fake.db', False)
