@@ -45,6 +45,10 @@ def process_message(user_id, message):
     question = question_tree.get(state)
     response = question.get(check_message(message))
 
+    return response_handler(message, response, user_id)
+
+
+def response_handler(message, response, user_id):
     if not response:
         return WRONG_QUERY, 0
     if response in question_tree:
