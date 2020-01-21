@@ -39,8 +39,8 @@ def process_message(user_id, message):
         save_node(user_id, state, message)
         return question_tree['start']['message'], 0
     state = get_current_node(user_id)
-    if not state:
-        return WELCOME, 0
+    # if not state:
+    #     return WELCOME, 0
 
     question = question_tree.get(state)
     response = question.get(check_message(message))
